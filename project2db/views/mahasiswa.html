@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body> 
+		<table cellpadding="10" border="1">
+			<thead>
+				<th> Name </th>
+				<th> NIM </th>
+				<th> Email </th>
+				<th> Alamat </th>
+			</thead>
+			<tbody>
+				{% for mhs in mhs_dt %}
+				<tr>
+					<td>{{ mhs.nama }}</td>
+					<td>{{ mhs.nim }}</td> 
+					<td>{{ mhs.email }}</td>
+					<td>{{ mhs.alamat }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</body>
+</html>

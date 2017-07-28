@@ -68,6 +68,6 @@ http.createServer(function(req,res){
   /*res.write("you request : "+req.url+"\n");
   res.write("Hello from Dimas");*/
   //res.end();
-}).listen(8888);
+}).listen(5858);
 
 console.log("server is running .....");
