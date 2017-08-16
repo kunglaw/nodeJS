@@ -12,6 +12,23 @@ var connection = mysql.createConnection({
 	
 });
 
+routes.addRoute("/insert",function(req,res){
+	
+	connection.query("INSERT INTO mahasiswa set ?",{
+		nama:"Muhammad Abraham",
+		nim:1200463627,
+		email:"bram.abe@gmail.com",
+		alamat:"jl. depok raya"
+		
+	},function(err,field){
+		
+		if(err) throw err;
+		
+		
+	});
+	
+});
+
 routes.addRoute("/test_db",function(req,res){
 	
 	connection.query("SELECT * FROM mahasiswa",function(err,rows,field){
