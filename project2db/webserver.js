@@ -3,6 +3,7 @@ var url  = require("url");
 var view = require("swig");
 var routes = require("routes")();
 var mysql  = require("mysql");
+
 var connection = mysql.createConnection({
 	host:"localhost",
 	port : "3306",
@@ -14,6 +15,8 @@ var connection = mysql.createConnection({
 
 routes.addRoute("/insert",function(req,res){
 	
+	var msg;
+	
 	connection.query("INSERT INTO mahasiswa set ?",{
 		nama:"Muhammad Abraham",
 		nim:1200463627,
@@ -22,10 +25,21 @@ routes.addRoute("/insert",function(req,res){
 		
 	},function(err,field){
 		
-		if(err) throw err;
+		if(err)
+		{
+			throw err;
+			msg = "Error looh";
+		}	
+		else
+		{
+			msg = "Insert mahasiswa berhasil";
+		}
 		
 		
 	});
+	
+	res.writeHead(200,{"Content-Type":"text/html"});
+	res.end(msg);
 	
 });
 
