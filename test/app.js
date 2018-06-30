@@ -1,6 +1,16 @@
 // javascript
 
-console.log(" Hello World ");
-console.log(" aaaaaa ");
+var harga = 30000000;
+function paket_nikah (harga )
+{
+	if(harga <= 30000000)
+	{
+		
+		result "Murah";
+	}
 
-//alert(" babi "); 
+	return result;
+}
+
+result = paket_nikah();
+document.write( result );

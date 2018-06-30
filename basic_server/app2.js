@@ -13,16 +13,16 @@ http.createServer(function(req,res){
 
     var data = qString.parse(access.query); // sudah berubah jadi object dr queryString
     res.writeHead(code,{"Content-type":"text/plain"});
-    res.end(JSON.stringify(data));
+    res.end("aaaa");
   
 
- /* var html  = " <html><head></head><body><h1> Hello world </h1><hr><div>";
+ /*var html  = " <html><head></head><body><h1> Hello world </h1><hr><div>";
  html += "Nama : "+data.nama+"<br>";
  html += "Umur : "+data.umur;
  html += "</div></body></html> ";
  //console.log(access.query);
 
-  res.writeHead(code,{"Content-type":"text/html"});
+  /*res.writeHead(code,{"Content-type":"text/html"});
   res.end(html);*/
   //res.end();
 }).listen(8888);
